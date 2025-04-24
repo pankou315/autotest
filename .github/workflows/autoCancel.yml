@@ -1,11 +1,12 @@
 name: Auto Cancel
-on: pull_request:
+on:
+  pull_request:
     paths: ['.github/workflows/*.yml','.github/workflows/*.yaml']
 concurrency:
- group: ${{ github.workflow }}-${{ github.ref }}
- cancel-in-progress: true
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
 jobs:
- sleep:
-   runs-on: ubuntu-latest
-   steps:
-     - run: sleep 120
+  sleep:
+    runs-on: ubuntu-latest
+    steps:
+      - run: sleep 120
