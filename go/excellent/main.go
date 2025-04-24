@@ -8,6 +8,7 @@ func EvenOrOdd(number int) string {
 	return "Odd"
 }
 
+
 func main() {
 	fmt.Println(EvenOrOdd(10))
 	fmt.Println(EvenOrOdd(7))
